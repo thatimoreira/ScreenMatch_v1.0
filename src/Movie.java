@@ -22,4 +22,8 @@ public class Movie {
         ratingSum += newRating;
         totalRatings++;
     }
+
+    double  calculateRatingAverage(){
+        return (ratingSum/totalRatings);
+    }
 }
