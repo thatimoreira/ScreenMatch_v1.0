@@ -2,7 +2,7 @@ public class Movie {
     String  movieTitle;             //nomeFilme
     int     releaseYear;            //anoDeLançamento
     boolean includedInPlan;         //incluidoNoPlano
-    double  rating;                 //avaliacao
+    double  ratingSum;                 //somaDasAvaliacoes
     int     totalRatings;          //totalDeAvaliacoes
     int     runningTimesInMinutes;  //duracaoEmMinutos
 
@@ -15,8 +15,11 @@ public class Movie {
         else{
             System.out.println("Included in plan: No");
         }
-        System.out.printf("Rating..........: %.2f\n", rating);
         System.out.printf("Running time....: %d min\n", runningTimesInMinutes);
-        System.out.printf("Total ratings...: %d\n", ++totalRatings);
+    }
+
+    void    updateRating(double newRating){
+        ratingSum += newRating;
+        totalRatings++;
     }
 }
