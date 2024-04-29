@@ -3,6 +3,6 @@ public class Movie {
     int     releaseYear;            //anoDeLançamento
     boolean includedInPlan;         //incluidoNoPlano
     double  rating;                 //avaliacao
-    int     totalRatinsgs;          //totalDeAvaliacoes
+    int     totalRatings;          //totalDeAvaliacoes
     int     runningTimesInMinutes;  //duracaoEmMinutos
 }
