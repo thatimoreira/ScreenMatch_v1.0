@@ -19,8 +19,13 @@ public class Movie {
     }
 
     void    updateRatingSum(double newRating){
-        ratingSum += newRating;
-        totalRatings++;
+        if (newRating >= 0){
+            ratingSum += newRating;
+            totalRatings++;
+        } else{
+            System.out.println("Invalid rating. the rating must be equal or greater than zero");
+        }
+        
     }
 
     double  calculateRatingAverage(){
