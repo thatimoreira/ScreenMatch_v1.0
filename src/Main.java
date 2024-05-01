@@ -3,10 +3,10 @@ import br.com.alura.screenmatch.models.Movie;
 public class Main {
     public static void main(String[] args) {
         Movie movie1 = new Movie();
-        movie1.movieTitle = "The Godfather";
-        movie1.releaseYear = 1972;
-        movie1.includedInPlan = true;
-        movie1.runningTimesInMinutes = 175;
+        movie1.setMovieTitle("The Godfather");
+        movie1.setReleaseYear(1972);
+        movie1.setIncludedInPlan(true);
+        movie1.setRunningTimesInMinutes(175);
 
         movie1.displayMovieInfo();
         movie1.updateRatingSum(8);

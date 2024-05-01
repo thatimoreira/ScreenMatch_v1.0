@@ -1,15 +1,51 @@
 package br.com.alura.screenmatch.models;
 
 public class Movie {
-    public String   movieTitle;             //nomeFilme
-    public int      releaseYear;            //anoDeLançamento
-    public boolean  includedInPlan;         //incluidoNoPlano
+    private String   movieTitle;             //nomeFilme
+    private int      releaseYear;            //anoDeLançamento
+    private boolean  includedInPlan;         //incluidoNoPlano
     private double  ratingSum;              //somaDasAvaliacoes
     private int     totalRatings;           //totalDeAvaliacoes
-    public int      runningTimesInMinutes;  //duracaoEmMinutos
+    private int      runningTimesInMinutes;  //duracaoEmMinutos
+
+    public String getMovieTitle() {
+        return movieTitle;
+    }
+
+    public int getReleaseYear() {
+        return releaseYear;
+    }
+
+    public boolean isIncludedInPlan() {
+        return includedInPlan;
+    }
+
+    public double getRatingSum() {
+        return ratingSum;
+    }
+
+    public int getRunningTimesInMinutes() {
+        return runningTimesInMinutes;
+    }
 
     public int getTotalRatings(){
         return (totalRatings);
+    }
+
+    public void setMovieTitle(String movieTitle) {
+        this.movieTitle = movieTitle;
+    }
+
+    public void setReleaseYear(int releaseYear) {
+        this.releaseYear = releaseYear;
+    }
+
+    public void setIncludedInPlan(boolean includedInPlan) {
+        this.includedInPlan = includedInPlan;
+    }
+
+    public void setRunningTimesInMinutes(int runningTimesInMinutes) {
+        this.runningTimesInMinutes = runningTimesInMinutes;
     }
 
     public void    displayMovieInfo(){
