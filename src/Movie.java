@@ -19,7 +19,7 @@ public class Movie {
     }
 
     void    updateRatingSum(double newRating){
-        if (newRating >= 0){
+        if (newRating >= 0 && newRating <= 10){
             ratingSum += newRating;
             totalRatings++;
         } else{
