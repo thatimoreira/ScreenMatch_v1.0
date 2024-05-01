@@ -18,7 +18,7 @@ public class Movie {
         System.out.printf("Running time....: %d min\n", runningTimesInMinutes);
     }
 
-    void    updateRating(double newRating){
+    void    updateRatingSum(double newRating){
         ratingSum += newRating;
         totalRatings++;
     }
