@@ -1,18 +1,20 @@
+package br.com.alura.screenmatch.models;
+
 public class Movie {
-    String          movieTitle;             //nomeFilme
-    int             releaseYear;            //anoDeLançamento
-    boolean         includedInPlan;         //incluidoNoPlano
+    public String   movieTitle;             //nomeFilme
+    public int      releaseYear;            //anoDeLançamento
+    public boolean  includedInPlan;         //incluidoNoPlano
     private double  ratingSum;              //somaDasAvaliacoes
     private int     totalRatings;           //totalDeAvaliacoes
-    int             runningTimesInMinutes;  //duracaoEmMinutos
+    public int      runningTimesInMinutes;  //duracaoEmMinutos
 
-    int getTotalRatings(){
+    public int getTotalRatings(){
         return (totalRatings);
     }
 
-    void    displayMovieInfo(){
-        System.out.printf("Movie title.....: %s\n", movieTitle);
-        System.out.printf("Release year....: %s\n", releaseYear);
+    public void    displayMovieInfo(){
+        System.out.printf("br.com.alura.screenmatch.models.Movie title.....: %s\n", movieTitle);
+        System.out.printf("Release year....: %d\n", releaseYear);
         if (includedInPlan == true){
             System.out.println("Included in plan: Yes");
         }
@@ -22,7 +24,7 @@ public class Movie {
         System.out.printf("Running time....: %d min\n", runningTimesInMinutes);
     }
 
-    void    updateRatingSum(double newRating){
+    public void    updateRatingSum(double newRating){
         if (newRating >= 0 && newRating <= 10){
             ratingSum += newRating;
             totalRatings++;
@@ -31,7 +33,7 @@ public class Movie {
         }   
     }
 
-    double  calculateRatingAverage(){
+    public double  calculateRatingAverage(){
         return (ratingSum/totalRatings);
     }
 }

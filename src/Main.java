@@ -1,6 +1,8 @@
+import br.com.alura.screenmatch.models.Movie;
+
 public class Main {
     public static void main(String[] args) {
-        Movie   movie1 = new Movie();
+        Movie movie1 = new Movie();
         movie1.movieTitle = "The Godfather";
         movie1.releaseYear = 1972;
         movie1.includedInPlan = true;

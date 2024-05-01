@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/ScreenMatch_v1.1.iml" filepath="$PROJECT_DIR$/ScreenMatch_v1.1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/src/br.com.alura.screenmatch.modelsNEW/br.com.alura.screenmatch.modelsNEW.iml" filepath="$PROJECT_DIR$/src/br.com.alura.screenmatch.modelsNEW/br.com.alura.screenmatch.modelsNEW.iml" />
     </modules>
   </component>
 </project>
