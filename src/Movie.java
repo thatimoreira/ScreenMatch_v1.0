@@ -1,10 +1,14 @@
 public class Movie {
-    String  movieTitle;             //nomeFilme
-    int     releaseYear;            //anoDeLançamento
-    boolean includedInPlan;         //incluidoNoPlano
-    double  ratingSum;                 //somaDasAvaliacoes
-    int     totalRatings;          //totalDeAvaliacoes
-    int     runningTimesInMinutes;  //duracaoEmMinutos
+    String          movieTitle;             //nomeFilme
+    int             releaseYear;            //anoDeLançamento
+    boolean         includedInPlan;         //incluidoNoPlano
+    private double  ratingSum;              //somaDasAvaliacoes
+    private int     totalRatings;           //totalDeAvaliacoes
+    int             runningTimesInMinutes;  //duracaoEmMinutos
+
+    int getTotalRatings(){
+        return (totalRatings);
+    }
 
     void    displayMovieInfo(){
         System.out.printf("Movie title.....: %s\n", movieTitle);
@@ -24,8 +28,7 @@ public class Movie {
             totalRatings++;
         } else{
             System.out.println("Invalid rating. the rating must be equal or greater than zero");
-        }
-        
+        }   
     }
 
     double  calculateRatingAverage(){
