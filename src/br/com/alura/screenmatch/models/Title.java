@@ -24,7 +24,7 @@ public class Title {
         return ratingSum;
     }
 
-    public int getRunningTimesInMinutes() {
+    public int getRunningTimeInMinutes() {
         return runningTimesInMinutes;
     }
 
