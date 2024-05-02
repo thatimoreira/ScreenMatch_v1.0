@@ -1,3 +1,4 @@
+import br.com.alura.screenmatch.calculations.TimeCalculator;
 import br.com.alura.screenmatch.models.Movie;
 import br.com.alura.screenmatch.models.Serie;
 
@@ -30,8 +31,14 @@ public class Main {
         demonSlayer.setMinutesPerEpisode(25);
         demonSlayer.setSeasons(4);
         demonSlayer.displayTitleInfo();
-        System.out.printf("Time to binge-watch: %dmin\n", demonSlayer.getRunningTimeInMinutes());
+        System.out.printf("Time to binge-watch: %d min\n", demonSlayer.getRunningTimeInMinutes());
         System.out.printf("Total ratings......: %d\n", demonSlayer.getTotalRatings());
         System.out.printf("Rating average.....: %.2f\n", demonSlayer.calculateRatingAverage());
+
+        System.out.println("\n-------------------- BINGE-WATCH TIME --------------------");
+        TimeCalculator  calculator = new TimeCalculator();
+        calculator.add(godfather);
+        calculator.add(demonSlayer);
+        System.out.printf("Binge-watch time: %s min\n", calculator.getTotalTime());
     }
 }
