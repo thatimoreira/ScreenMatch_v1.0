@@ -83,5 +83,7 @@ public class Main {
         movieList.add(cityOfGod);
         System.out.printf("\nList size: %d\n", movieList.size());
         System.out.printf("First movie: %s\n", movieList.get(0).getTitle());
+        System.out.println(movieList);
+        System.out.printf("Movie toString method: %s\n", movieList.get(0).toString());
     }
 }

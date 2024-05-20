@@ -17,4 +17,9 @@ public class Movie extends Title implements Rateable {
     public int getRating() {
         return (int) getRatingSum() / getTotalRatings();
     }
+
+    @Override
+    public String toString() {
+        return "Movie: " + getTitle() + " (" + getReleaseYear() + ")";
+    }
 }
