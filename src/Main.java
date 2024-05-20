@@ -5,6 +5,8 @@ import br.com.alura.screenmatch.models.Episode;
 import br.com.alura.screenmatch.models.Movie;
 import br.com.alura.screenmatch.models.Serie;
 
+import java.util.ArrayList;
+
 public class Main {
     public static void main(String[] args) {
         Movie godfather = new Movie();
@@ -68,5 +70,18 @@ public class Main {
         demonSlayer.setTotalViews(600);
         System.out.printf("Episode %d: '%s' -> ", demonSlayer.getNumber(), demonSlayer.getName());
         recommendationFilter.filter(demonSlayer);
+
+        Movie   cityOfGod = new Movie();
+        cityOfGod.setRunningTimesInMinutes(129);
+        cityOfGod.setTitle("City o God (Cidade de Deus)");
+        cityOfGod.setReleaseYear(2002);
+        cityOfGod.updateRatingSum(9.8);
+        cityOfGod.setIncludedInPlan(true);
+
+        ArrayList<Movie> movieList = new ArrayList<>();
+        movieList.add(godfather);
+        movieList.add(cityOfGod);
+        System.out.printf("\nList size: %d\n", movieList.size());
+        System.out.printf("First movie: %s\n", movieList.get(0).getTitle());
     }
 }
