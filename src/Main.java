@@ -9,8 +9,8 @@ import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
-        Movie godfather = new Movie();
-        godfather.setTitle("The Godfather");
+        Movie godfather = new Movie("The Godfather");
+        //godfather.setTitle("The Godfather");
         godfather.setReleaseYear(1972);
         godfather.setIncludedInPlan(true);
         godfather.setRunningTimesInMinutes(175);
@@ -71,9 +71,9 @@ public class Main {
         System.out.printf("Episode %d: '%s' -> ", demonSlayer.getNumber(), demonSlayer.getName());
         recommendationFilter.filter(demonSlayer);
 
-        Movie   cityOfGod = new Movie();
+        Movie   cityOfGod = new Movie("City of God");
         cityOfGod.setRunningTimesInMinutes(129);
-        cityOfGod.setTitle("City o God (Cidade de Deus)");
+        cityOfGod.setTitle("City of God (Cidade de Deus)");
         cityOfGod.setReleaseYear(2002);
         cityOfGod.updateRatingSum(9.8);
         cityOfGod.setIncludedInPlan(true);
