@@ -6,6 +6,10 @@ public class Serie extends Title {
     private boolean active;         //indicates if new episodes will be released
     private int minutesPerEpisode;
 
+    public Serie(String title, int releaseYear) {
+        super(title, releaseYear);
+    }
+
     public int getSeasons() {
         return seasons;
     }

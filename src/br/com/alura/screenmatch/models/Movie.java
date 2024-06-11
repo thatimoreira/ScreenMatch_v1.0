@@ -6,8 +6,8 @@ public class Movie extends Title implements Rateable {
     private String  director;
 
     // Constructor -> same name as the class and returns nothing
-    public Movie(String title) {
-        this.setTitle(title);
+    public Movie(String title, int releaseYear) {
+        super(title, releaseYear);
     }
 
     public String getDirector() {

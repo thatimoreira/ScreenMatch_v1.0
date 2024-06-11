@@ -8,6 +8,10 @@ public class Episode extends Serie implements Rateable {
     private Serie   serie;
     private int     totalViews;
 
+    public Episode(String title, int releaseYear) {
+        super(title, releaseYear);
+    }
+
     public int getNumber() {
         return number;
     }
