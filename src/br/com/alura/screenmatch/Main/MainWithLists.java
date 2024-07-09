@@ -27,5 +27,13 @@ public class MainWithLists {
             Movie movie = (Movie) item; // typecasting
             System.out.println("Rating average: " + movie.calculateRatingAverage());
         }
+
+        /*for (Title item : list) {
+            System.out.println(item.getName());
+            if (item instanceof Movie movie) { // a partir do Java 14
+                System.out.println("Rating average: " + movie.calculateRatingAverage());
+            }
+        }*/
+
     }
 }
