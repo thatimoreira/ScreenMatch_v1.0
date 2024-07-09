@@ -56,7 +56,7 @@ public class Title {
     public void displayTitleInfo(){
         System.out.printf("Title..............: %s\n", title);
         System.out.printf("Release year.......: %d\n", releaseYear);
-        if (includedInPlan == true){
+        if (includedInPlan){
             System.out.println("Included in plan...: Yes");
         }
         else{

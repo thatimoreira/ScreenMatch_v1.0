@@ -3,21 +3,21 @@ package br.com.alura.screenmatch.models;
 import br.com.alura.screenmatch.calculations.Rateable;
 
 public class Movie extends Title implements Rateable {
-    private String  director;
+    //private String  director;
 
     // Constructor -> same name as the class and returns nothing
     public Movie(String title, int releaseYear) {
         super(title, releaseYear);
     }
 
-    public String getDirector() {
+    /*public String getDirector() {
         return director;
-    }
+    }*/
 
     // Now a constructor was created (line 9), so is this setter really necessary?
-    public void setDirector(String director) {
+    /*public void setDirector(String director) {
         this.director = director;
-    }
+    }*/
 
     @Override
     public int getRating() {
