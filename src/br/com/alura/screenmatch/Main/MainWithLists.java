@@ -6,6 +6,7 @@ import br.com.alura.screenmatch.models.Title;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Comparator;
 
 public class MainWithLists {
     public static void main(String[] args) {
@@ -21,7 +22,7 @@ public class MainWithLists {
         list.add(godfather);
         list.add(avatar);
         list.add(cityOfGod);
-        list.add(lost);
+        //list.add(lost);
 
         for (Title item : list) {
             System.out.println(item);
@@ -45,6 +46,10 @@ public class MainWithLists {
 
         // Sorted movie list
         Collections.sort(list);
+        System.out.println(list);
+
+        // Sorting list by release year - with comparator
+        list.sort(Comparator.comparing(Title::getReleaseYear));
         System.out.println(list);
     }
 }
