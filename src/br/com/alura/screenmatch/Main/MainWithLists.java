@@ -21,7 +21,7 @@ public class MainWithLists {
         list.add(godfather);
         list.add(avatar);
         list.add(cityOfGod);
-        //list.add(lost);
+        list.add(lost);
 
         for (Title item : list) {
             System.out.println(item);
