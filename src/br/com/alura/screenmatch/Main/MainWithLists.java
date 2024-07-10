@@ -5,6 +5,7 @@ import br.com.alura.screenmatch.models.Serie;
 import br.com.alura.screenmatch.models.Title;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class MainWithLists {
     public static void main(String[] args) {
@@ -20,7 +21,7 @@ public class MainWithLists {
         list.add(godfather);
         list.add(avatar);
         list.add(cityOfGod);
-        list.add(lost);
+        //list.add(lost);
 
         for (Title item : list) {
             System.out.println(item);
@@ -30,10 +31,20 @@ public class MainWithLists {
 
         /*for (Title item : list) {
             System.out.println(item.getName());
-            if (item instanceof Movie movie) { // a partir do Java 14
+            if (item instanceof Movie movie && movie.calculateRatingAverage() > 2) { // a partir do Java 14
                 System.out.println("Rating average: " + movie.calculateRatingAverage());
             }
         }*/
 
+        ArrayList<String> artistSearch = new ArrayList<>();
+        artistSearch.add("Francis Coppola");
+        artistSearch.add("Zoe Saldaña");
+        artistSearch.add("Alexandre Rodrigues");
+        artistSearch.add("Harold Perrineau");
+        System.out.println(artistSearch);
+
+        // Sorted list
+        Collections.sort(artistSearch);
+        System.out.println(artistSearch);
     }
 }
