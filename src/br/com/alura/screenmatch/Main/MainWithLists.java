@@ -43,8 +43,8 @@ public class MainWithLists {
         artistSearch.add("Harold Perrineau");
         System.out.println(artistSearch);
 
-        // Sorted list
-        Collections.sort(artistSearch);
-        System.out.println(artistSearch);
+        // Sorted movie list
+        Collections.sort(list);
+        System.out.println(list);
     }
 }
