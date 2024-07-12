@@ -1,4 +1,4 @@
-package br.com.alura.screenmatch.Main;
+package br.com.alura.screenmatch.main;
 
 import br.com.alura.screenmatch.calculations.Rateable;
 import br.com.alura.screenmatch.calculations.RecommendationFilter;

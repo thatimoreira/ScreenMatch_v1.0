@@ -1,6 +1,7 @@
 package br.com.alura.screenmatch.models;
 
 public class Title implements Comparable<Title>{
+    
     private String  title;             //nomeFilme
     private int     releaseYear;            //anoDeLançamento
     private boolean includedInPlan;         //incluidoNoPlano
