@@ -7,6 +7,8 @@ import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 import java.net.http.HttpResponse.BodyHandlers;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 import com.google.gson.FieldNamingPolicy;
@@ -20,8 +22,14 @@ import br.com.alura.screenmatch.models.Title;
 public class MainWithSearch {
     public static void main(String[] args) throws IOException, InterruptedException {
         Scanner keyboard = new Scanner(System.in);
+        String search = "";
+
+        List<Title> titles = new ArrayList<>();
+
+        while (!search.equalsIgnoreCase("exit")) {
+
         System.out.print("Qual filme deseja buscar? ");
-        var search = keyboard.nextLine();
+        search = keyboard.nextLine();
 
         String adress = "https://www.omdbapi.com/?t=" + search.replace(" ", "+") + "&apikey=7bc2b861";
 
@@ -45,9 +53,7 @@ public class MainWithSearch {
                     System.out.println("Converted title:");
                     System.out.println(myTitle);
 
-                    FileWriter writer = new FileWriter("movies.txt");
-                    writer.write(myTitle.toString());
-                    writer.close();
+                    titles.add(myTitle);
         } catch (NumberFormatException e) {
             System.out.print("Error: ");
             System.out.println(e.getMessage());
@@ -56,9 +62,11 @@ public class MainWithSearch {
         } catch (InvalidYearFormatException e) {
             System.out.println(e.getMessage());
         }
+    }
+    System.out.println(titles);
 
-        System.out.println("EXIT SUCCESS!");
+    System.out.println("EXIT SUCCESS!");
 
-        keyboard.close();
+    keyboard.close();
     }
 }
