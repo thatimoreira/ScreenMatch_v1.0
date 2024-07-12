@@ -10,7 +10,7 @@ import java.util.Scanner;
 
 import com.google.gson.Gson;
 
-import br.com.alura.screenmatch.models.Title;
+import br.com.alura.screenmatch.models.OmdbTitle;
 
 public class MainWithSearch {
     public static void main(String[] args) throws IOException, InterruptedException {
@@ -30,8 +30,9 @@ public class MainWithSearch {
     System.out.println(json);
 
     Gson gson = new Gson();
-    Title myTile = gson.fromJson(json, Title.class);
-    System.out.println(myTile);
+    // Title myTile = gson.fromJson(json, Title.class);
+    OmdbTitle myOmdbTitle = gson.fromJson(json, OmdbTitle.class);
+    System.out.println(myOmdbTitle);
 
     keyboard.close();
     }
