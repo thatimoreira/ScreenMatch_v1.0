@@ -1,5 +1,6 @@
 package br.com.alura.screenmatch.main;
 
+import java.io.FileWriter;
 import java.io.IOException;
 import java.net.URI;
 import java.net.http.HttpClient;
@@ -43,6 +44,10 @@ public class MainWithSearch {
                     Title myTitle = new Title(myOmdbTitle);
                     System.out.println("Converted title:");
                     System.out.println(myTitle);
+
+                    FileWriter writer = new FileWriter("movies.txt");
+                    writer.write(myTitle.toString());
+                    writer.close();
         } catch (NumberFormatException e) {
             System.out.print("Error: ");
             System.out.println(e.getMessage());
