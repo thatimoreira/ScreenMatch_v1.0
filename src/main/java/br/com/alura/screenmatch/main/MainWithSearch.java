@@ -12,6 +12,7 @@ import com.google.gson.FieldNamingPolicy;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
+import br.com.alura.screenmatch.exceptions.InvalidYearFormatException;
 import br.com.alura.screenmatch.models.OmdbTitle;
 import br.com.alura.screenmatch.models.Title;
 
@@ -21,7 +22,7 @@ public class MainWithSearch {
         System.out.print("Qual filme deseja buscar? ");
         var search = keyboard.nextLine();
 
-        String adress = "https://www.omdbapi.com/?t=" + search + "&apikey=7bc2b861";
+        String adress = "https://www.omdbapi.com/?t=" + search.replace(" ", "+") + "&apikey=7bc2b861";
 
         try {
                 HttpClient client = HttpClient.newHttpClient();
@@ -47,6 +48,8 @@ public class MainWithSearch {
             System.out.println(e.getMessage());
         } catch (IllegalArgumentException e) {
             System.out.println("Error: please check the argument(s)");
+        } catch (InvalidYearFormatException e) {
+            System.out.println(e.getMessage());
         }
 
         System.out.println("EXIT SUCCESS!");

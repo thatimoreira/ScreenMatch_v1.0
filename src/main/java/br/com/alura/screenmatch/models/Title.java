@@ -2,10 +2,10 @@ package br.com.alura.screenmatch.models;
 
 import com.google.gson.annotations.SerializedName;
 
+import br.com.alura.screenmatch.exceptions.InvalidYearFormatException;
+
 public class Title implements Comparable<Title>{
-    @SerializedName("Title")
     private String  title;             //nomeFilme
-    @SerializedName("Year")
     private int     releaseYear;            //anoDeLançamento
     private boolean includedInPlan;         //incluidoNoPlano
     private double  ratingSum;              //somaDasAvaliacoes
@@ -19,6 +19,10 @@ public class Title implements Comparable<Title>{
 
     public Title(OmdbTitle myOmdbTitle) {
         this.title = myOmdbTitle.title();
+
+        if (myOmdbTitle.year().length() != 4) {
+            throw new InvalidYearFormatException("Error: wrong year format");
+        }
         this.releaseYear = Integer.valueOf(myOmdbTitle.year());
         this.runningTimesInMinutes = Integer.valueOf(myOmdbTitle.runtime().substring(0, 2));
     }
