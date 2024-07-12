@@ -26,6 +26,10 @@ public class MainWithSearch {
 
         List<Title> titles = new ArrayList<>();
 
+        Gson gson = new GsonBuilder()
+                        .setFieldNamingPolicy(FieldNamingPolicy.UPPER_CAMEL_CASE)
+                        .create();
+
         while (!search.equalsIgnoreCase("exit")) {
 
         System.out.print("Qual filme deseja buscar? ");
@@ -43,9 +47,6 @@ public class MainWithSearch {
                 String json = response.body();
                 System.out.println(json);
 
-                Gson gson = new GsonBuilder()
-                        .setFieldNamingPolicy(FieldNamingPolicy.UPPER_CAMEL_CASE)
-                        .create();
                 OmdbTitle myOmdbTitle = gson.fromJson(json, OmdbTitle.class);
                 System.out.println(myOmdbTitle);
 
@@ -64,6 +65,12 @@ public class MainWithSearch {
         }
     }
     System.out.println(titles);
+
+    try (FileWriter writer = new FileWriter("movies.json")) {
+        writer.write(gson.toJson(titles));
+    } catch (IOException e) {
+        System.out.println("Error: could not write to file: " + e.getMessage());
+    }
 
     System.out.println("EXIT SUCCESS!");
 
