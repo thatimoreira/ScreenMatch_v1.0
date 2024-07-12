@@ -13,6 +13,7 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
 import br.com.alura.screenmatch.models.OmdbTitle;
+import br.com.alura.screenmatch.models.Title;
 
 public class MainWithSearch {
     public static void main(String[] args) throws IOException, InterruptedException {
@@ -34,9 +35,12 @@ public class MainWithSearch {
     Gson gson = new GsonBuilder()
             .setFieldNamingPolicy(FieldNamingPolicy.UPPER_CAMEL_CASE)
             .create();
-    // Title myTile = gson.fromJson(json, Title.class);
     OmdbTitle myOmdbTitle = gson.fromJson(json, OmdbTitle.class);
     System.out.println(myOmdbTitle);
+
+    Title myTitle = new Title(myOmdbTitle);
+    System.out.println("Converted title:");
+    System.out.println(myTitle);
 
     keyboard.close();
     }
