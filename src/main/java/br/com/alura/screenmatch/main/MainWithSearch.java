@@ -31,7 +31,7 @@ public class MainWithSearch {
 
     Gson gson = new Gson();
     Title myTile = gson.fromJson(json, Title.class);
-    System.out.println("Title: " + myTile.getTitle());
+    System.out.println(myTile);
 
     keyboard.close();
     }
